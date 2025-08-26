@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>codeSEO - Web Development & SEO Excellence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,12 +12,11 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            overflow-x: hidden;
         }
 
         .container {
@@ -30,50 +28,42 @@
         /* Header Section */
         .header {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: 3.5rem;
             font-weight: 700;
-            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(45deg, #667eea, #764ba2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 1rem;
-            animation: slideInDown 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             letter-spacing: -0.02em;
         }
 
         .tagline {
-            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-size: 1.3rem;
             color: #4a5568;
             margin-bottom: 2rem;
             font-weight: 400;
-            animation: slideInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
         }
 
         /* Hero Section */
         .hero {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4rem 2rem;
             text-align: center;
             color: white;
             margin: 2rem 0;
             border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            animation: fadeInScale 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: 3rem;
             margin-bottom: 1.5rem;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             font-weight: 600;
@@ -81,7 +71,7 @@
         }
 
         .hero p {
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-size: 1.25rem;
             opacity: 0.95;
             max-width: 700px;
             margin: 0 auto;
@@ -95,19 +85,15 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin: 4rem 0;
-            padding: 0 1rem;
         }
 
         .service-card {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            animation: slideInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -119,9 +105,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.3s ease;
         }
 
         .service-card:hover::before {
@@ -129,8 +115,8 @@
         }
 
         .service-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 20px 60px rgba(31, 38, 135, 0.4);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
         }
 
         .service-icon {
@@ -158,21 +144,56 @@
             z-index: 1;
         }
 
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
         /* Client Work Section */
         .client-work {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             padding: 4rem 0;
             margin: 4rem 0;
             border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .section-title {
             text-align: center;
-            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-size: 2.8rem;
             margin-bottom: 3rem;
             color: #2d3748;
             font-weight: 600;
@@ -197,7 +218,7 @@
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 2.5rem;
             margin-top: 4rem;
-            padding: 0 1rem;
+            padding: 0 2rem;
         }
 
         .client-card {
@@ -205,7 +226,7 @@
             padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-left: 6px solid transparent;
             background-clip: padding-box;
             position: relative;
@@ -270,63 +291,21 @@
             color: #667eea;
         }
 
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-            padding: 0 1rem;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 2.5rem 1.5rem;
-            border-radius: 20px;
-            color: white;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-
-        .stat-card:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.25);
-        }
-
-        .stat-number {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            letter-spacing: -0.02em;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            font-weight: 400;
-        }
-
         /* Contact Section */
         .contact {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             padding: 4rem 0;
             text-align: center;
             border-radius: 24px;
             margin: 4rem 0 2rem;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .contact h2 {
             color: #2d3748;
             margin-bottom: 1rem;
-            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-size: 2.5rem;
             font-weight: 600;
         }
 
@@ -350,7 +329,7 @@
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.3s ease;
             box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
             margin-top: 1rem;
         }
@@ -365,44 +344,26 @@
             font-size: 1.3rem;
         }
 
-        /* Animations */
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 padding: 0 15px;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
             }
             
             .services,
@@ -410,7 +371,10 @@
             .client-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
-                padding: 0;
+            }
+            
+            .client-grid {
+                padding: 0 1rem;
             }
             
             .service-card,
@@ -420,7 +384,7 @@
             
             .hero {
                 margin: 1rem 0;
-                padding: 3rem 1rem;
+                padding: 3rem 1.5rem;
             }
             
             .client-work,
@@ -431,6 +395,22 @@
         }
 
         @media (max-width: 480px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
             .service-card,
             .client-card {
                 padding: 1.5rem;
@@ -439,25 +419,48 @@
             .stat-card {
                 padding: 2rem 1rem;
             }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .contact h2 {
+                font-size: 2rem;
+            }
         }
 
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        /* Additional visual enhancements */
+        .hero {
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .service-card {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
-        /* Performance optimizations */
-        .service-card,
-        .client-card,
+        .client-work,
+        .contact {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
         .stat-card {
-            will-change: transform;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Ensure all content is visible */
+        .services > *,
+        .stats > *,
+        .client-grid > *,
+        .hero,
+        .client-work,
+        .contact {
+            opacity: 1;
+            visibility: visible;
         }
     </style>
 </head>
@@ -476,17 +479,17 @@
         </div>
 
         <div class="services">
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <span class="service-icon">🚀</span>
                 <h3>Web Development</h3>
                 <p>Custom-built websites with modern technologies, responsive design, and optimized performance. From concept to deployment, we deliver exceptional digital experiences that convert visitors into customers.</p>
             </div>
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <span class="service-icon">📈</span>
                 <h3>SEO Optimization</h3>
                 <p>Comprehensive SEO strategies that improve search rankings, increase organic traffic, and boost online visibility. Data-driven approaches with detailed analytics that deliver measurable, long-term results.</p>
             </div>
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <span class="service-icon">⚡</span>
                 <h3>Performance Optimization</h3>
                 <p>Speed optimization, mobile responsiveness, and technical SEO improvements that enhance user experience and search engine performance. Core Web Vitals optimization for better rankings.</p>
@@ -494,25 +497,25 @@
         </div>
 
         <div class="stats">
-            <div class="stat-card fade-in">
-                <div class="stat-number" data-target="50">50+</div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
                 <div class="stat-label">Projects Completed</div>
             </div>
-            <div class="stat-card fade-in">
-                <div class="stat-number" data-target="300">300%</div>
+            <div class="stat-card">
+                <div class="stat-number">300%</div>
                 <div class="stat-label">Average Traffic Increase</div>
             </div>
-            <div class="stat-card fade-in">
-                <div class="stat-number" data-target="15">15+</div>
+            <div class="stat-card">
+                <div class="stat-number">15+</div>
                 <div class="stat-label">Happy Clients</div>
             </div>
-            <div class="stat-card fade-in">
-                <div class="stat-number" data-target="99">99%</div>
+            <div class="stat-card">
+                <div class="stat-number">99%</div>
                 <div class="stat-label">Client Satisfaction</div>
             </div>
         </div>
 
-        <div class="client-work fade-in">
+        <div class="client-work">
             <div class="container">
                 <h2 class="section-title">Featured Client Work</h2>
                 <div class="client-grid">
@@ -550,7 +553,7 @@
             </div>
         </div>
 
-        <div class="contact fade-in">
+        <div class="contact">
             <div class="container">
                 <h2>Let's Work Together</h2>
                 <p>Ready to transform your digital presence? Get in touch for a consultation and let's discuss your project.</p>
@@ -561,99 +564,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Optimized scroll animation with Intersection Observer
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing once animated
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scrolling for better UX
-        document.documentElement.style.scrollBehavior = 'smooth';
-
-        // Optimized counter animation
-        function animateCounter(element, target, duration = 2000) {
-            if (element.classList.contains('animated')) return;
-            
-            element.classList.add('animated');
-            let start = 0;
-            const startTime = performance.now();
-            const isPercentage = element.textContent.includes('%');
-            const hasPlus = element.textContent.includes('+');
-            
-            function updateCounter(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function for smooth animation
-                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                const current = Math.floor(easeOutQuart * target);
-                
-                let displayValue = current;
-                if (isPercentage) displayValue += '%';
-                if (hasPlus) displayValue += '+';
-                
-                element.textContent = displayValue;
-                
-                if (progress < 1) {
-                    requestAnimationFrame(updateCounter);
-                }
-            }
-            
-            requestAnimationFrame(updateCounter);
-        }
-
-        // Stats counter observer
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const numberElement = entry.target.querySelector('.stat-number');
-                    const targetNumber = parseInt(numberElement.dataset.target);
-                    
-                    animateCounter(numberElement, targetNumber);
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.stat-card').forEach(card => {
-            statsObserver.observe(card);
-        });
-
-        // Add loading optimization
-        document.addEventListener('DOMContentLoaded', function() {
-            // Preload critical fonts
-            const link = document.createElement('link');
-            link.rel = 'preload';
-            link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-            link.as = 'style';
-            document.head.appendChild(link);
-        });
-
-        // Performance monitoring (optional)
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(() => {
-                // Lazy load non-critical animations
-                document.querySelectorAll('.service-card, .client-card').forEach(card => {
-                    card.style.willChange = 'auto';
-                });
-            });
-        }
-    </script>
 </body>
 </html>
+
